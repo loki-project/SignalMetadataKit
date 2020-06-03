@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint SignalMetadataKit.podspec' to ensure this is a
+# Be sure to run `pod lib lint SessionMetadataKit.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -7,21 +7,21 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = "SignalMetadataKit"
+  s.name             = "SessionMetadataKit"
   s.version          = "1.0.0"
-  s.summary          = "A Swift & Objective-C library used by other Signal libraries."
+  s.summary          = "A Swift & Objective-C library used by other Session libraries."
 
   s.description      = <<-DESC
-A Swift & Objective-C library used by other Signal libraries.
+A Swift & Objective-C library used by other Session libraries.
   DESC
 
-  s.homepage         = "https://github.com/signalapp/SignalMetadataKit"
+  s.homepage         = "https://github.com/loki-project/session-ios-metadata-kit"
   s.license          = 'GPLv3'
-  s.author           = { "iOS Team" => "ios@signal.org" }
-  s.source           = { :git => "https://github.com/signalapp/SignalMetadataKit.git", :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/signalapp'
+  s.author           = { "Niels Andriesse" => "niels@loki.network" }
+  s.source           = { :git => "https://github.com/loki-project/session-ios-metadata-kit.git", :tag => "#{s.version}" }
+  s.social_media_url = 'https://getsession.org/'
 
-  s.platform     = :ios, '9.0'
+  s.platform     = :ios, '10.0'
   #s.ios.deployment_target = '9.0'
   #s.osx.deployment_target = '10.9'
   s.requires_arc = true
@@ -39,14 +39,15 @@ A Swift & Objective-C library used by other Signal libraries.
   s.prefix_header_file = 'SignalMetadataKit/SMKPrefix.h'
   s.xcconfig = { 'OTHER_CFLAGS' => '$(inherited) -DSQLITE_HAS_CODEC' }
 
-  s.resources = ["SignalMetadataKit/Resources/Certificates/*"]
+  #s.resources = ["SignalMetadataKit/Resources/Certificates/*"]
 
-  s.dependency 'AxolotlKit'
+  s.dependency 'SessionAxolotlKit', '~> 1.0.1'
   s.dependency 'CocoaLumberjack'
-  s.dependency 'Curve25519Kit'
-  s.dependency 'HKDFKit'
-  s.dependency 'SignalCoreKit'
-  s.dependency 'SwiftProtobuf'
+  s.dependency 'CryptoSwift', '~> 1.0'
+  s.dependency 'SessionCurve25519Kit', '~> 2.1.1'
+  s.dependency 'SessionHKDFKit', '~> 0.0.5'
+  s.dependency 'SessionCoreKit', '~> 1.0.0'
+  s.dependency 'SwiftProtobuf', '~> 1.5.0'
 
   s.test_spec 'Tests' do |test_spec|
     test_spec.source_files = 'SignalMetadataKitTests/src/**/*.{h,m,swift}'

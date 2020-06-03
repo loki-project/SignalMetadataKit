@@ -3,7 +3,7 @@
 //
 
 import Foundation
-import SignalMetadataKit
+import SessionMetadataKit
 
 class MockCertificateValidator: NSObject, SMKCertificateValidator {
 

@@ -3,7 +3,7 @@
 //
 
 import Foundation
-import SignalCoreKit
+import SessionCoreKit
 
 @objc
 public class SMKUDAccessKey: NSObject {
@@ -42,8 +42,8 @@ public class SMKUDAccessKey: NSObject {
         self.keyData = Randomness.generateRandomBytes(Int32(SMKUDAccessKey.kUDAccessKeyLength))
     }
 
-    // MARK: 
-    
+    // MARK:
+
     override public func isEqual(_ object: Any?) -> Bool {
         guard let other = object as? SMKUDAccessKey else { return false }
         return self.keyData == other.keyData

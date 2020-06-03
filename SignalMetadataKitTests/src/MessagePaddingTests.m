@@ -3,7 +3,7 @@
 //
 
 #import "NSData+messagePadding.h"
-#import <SignalCoreKit/Cryptography.h>
+#import <SessionCoreKit/Cryptography.h>
 #import <XCTest/XCTest.h>
 
 @interface MessagePaddingTests : XCTestCase
@@ -19,12 +19,12 @@
         NSData *data = [NSMutableData dataWithLength:i];
         XCTAssertTrue([data paddedMessageBody].length == 159);
     }
-    
+
     for (NSUInteger i=159;i<319;i++) {
         NSData *data = [NSMutableData dataWithLength:i];
         XCTAssertTrue([data paddedMessageBody].length == 319);
     }
-    
+
     for (NSUInteger i=319;i<479;i++) {
         NSData *data = [NSMutableData dataWithLength:i];
         XCTAssertTrue([data paddedMessageBody].length == 479);

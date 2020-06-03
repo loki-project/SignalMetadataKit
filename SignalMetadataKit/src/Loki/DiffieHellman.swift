@@ -1,5 +1,5 @@
 import CryptoSwift
-import Curve25519Kit
+import SessionCurve25519Kit
 
 @objc public final class DiffieHellman : NSObject {
 

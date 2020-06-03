@@ -4,7 +4,7 @@
 
 import XCTest
 import SwiftProtobuf
-import SignalMetadataKit
+import SessionMetadataKit
 
 // See: https://github.com/signalapp/libsignal-metadata-java/blob/master/tests/src/test/java/org/signal/libsignal/metadata/certificate/ServerCertificateTest.java
 //

@@ -3,7 +3,7 @@
 //
 
 import XCTest
-import SignalMetadataKit
+import SessionMetadataKit
 
 // https://github.com/signalapp/libsignal-metadata-java/blob/master/tests/src/test/java/org/signal/libsignal/metadata/SecretSessionCipherTest.java
 //    public class SecretSessionCipherTest extends TestCase {

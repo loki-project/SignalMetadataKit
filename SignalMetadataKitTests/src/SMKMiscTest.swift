@@ -3,7 +3,7 @@
 //
 
 import XCTest
-import SignalMetadataKit
+import SessionMetadataKit
 
 class SMKTest: XCTestCase {
 

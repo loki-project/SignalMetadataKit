@@ -3,7 +3,7 @@
 //
 
 import XCTest
-import SignalMetadataKit
+import SessionMetadataKit
 
 extension MutableCollection {
     /// Shuffles the contents of this collection.
