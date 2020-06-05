@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SessionMetadataKit"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "A Swift & Objective-C library used by other Session libraries."
 
   s.description      = <<-DESC
