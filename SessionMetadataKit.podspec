@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SessionMetadataKit"
-  s.version          = "1.0.1"
+  s.version          = "1.0.2"
   s.summary          = "A Swift & Objective-C library used by other Session libraries."
 
   s.description      = <<-DESC
@@ -43,7 +43,7 @@ A Swift & Objective-C library used by other Session libraries.
 
   s.dependency 'SessionAxolotlKit', '~> 1.0.2'
   s.dependency 'CocoaLumberjack'
-  s.dependency 'CryptoSwift', '~> 1.0'
+  s.dependency 'CryptoSwift', '~> 1.3'
   s.dependency 'SessionCurve25519Kit', '~> 2.1.2'
   s.dependency 'SessionHKDFKit', '~> 0.0.5'
   s.dependency 'SessionCoreKit', '~> 1.0.0'
