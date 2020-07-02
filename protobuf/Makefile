@@ -2,7 +2,7 @@
 
 PROTOC=protoc \
 		--proto_path='./'
-WRAPPER_SCRIPT=../../Signal-iOS/Scripts/ProtoWrappers.py \
+WRAPPER_SCRIPT=../../session-ios/Scripts/ProtoWrappers.py \
 		--proto-dir='./' --verbose
 
 all: unidentified_delivery_protos

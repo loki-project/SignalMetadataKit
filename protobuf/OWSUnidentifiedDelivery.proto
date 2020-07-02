@@ -43,9 +43,9 @@ message SenderCertificate {
     }
 
     // @required
-    optional bytes certificate = 1;
+    optional string sender = 1;
     // @required
-    optional bytes signature = 2;
+    optional uint32 senderDevice = 2;
 }
 
 message UnidentifiedSenderMessage {
@@ -53,6 +53,8 @@ message UnidentifiedSenderMessage {
         enum Type {
             PREKEY_MESSAGE = 1;
             MESSAGE = 2;
+            LOKI_FRIEND_REQUEST = 3;
+            CLOSED_GROUP_CIPHERTEXT = 4;
         }
 
         // @required
